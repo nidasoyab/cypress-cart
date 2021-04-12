@@ -19,7 +19,6 @@ Cypress.on('uncaught:exception', (err) => {
     return false
     
   })
-  require('cypress-xpath')
   // patch Cypress top.onerror
 //   Object.defineProperty(top, 'onerror', {
 //     value: window.onerror,
