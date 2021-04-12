@@ -1,6 +1,5 @@
 {
     "baseUrl": "https://optum.falsepill.com",
     "viewportWidth": 1300,
-    "viewportHeight": 660,
-    "chromeWebSecurity": false
+    "viewportHeight": 660
 }
