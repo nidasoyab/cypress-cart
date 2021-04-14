@@ -28,13 +28,14 @@ Cypress.Commands.add("SignUp", ()=>{
     cy.visit("/")
     cy.get('.site-menu-account__label').click()
     cy.get('.site-menu-account__link').contains('Create Account').click()
-    cy.get('.opt-form-with-error__margin-right > .Label-module--label--2JSVv > .TextInput-module--input-wrapper--Kd-BG > .TextInput-module--input--1_OT7').type('eddy')
-    cy.get('.opt-form-with-error__margin-left > .Label-module--label--2JSVv > .TextInput-module--input-wrapper--Kd-BG > .TextInput-module--input--1_OT7').type('schez')
-
+    cy.visit('/account/signup')
+    
+    cy.get('input[data-testid="first-name"]').type("Eddy")
+    cy.get('input[data-testid="last-name"]').type("Schez")
     cy.get('input[name="phone_mask"]').type("6565665656")
-    cy.get(':nth-child(4) > .Label-module--label--2JSVv > .TextInput-module--input-wrapper--Kd-BG > .TextInput-module--input--1_OT7').type('eddysnchz9+' + ranText + '@gmail.com')
+    cy.get('input[data-testid="email-address"]').type('eddysnchz9+' + ranText + '@gmail.com')
     cy.get('input[name="password"]').type('Wad@@83gk3')
-    cy.get('.opt-custom-checkbox__icon-container__icon').click()
+    cy.get('input[name="termsOfService"]').click({force:true})
    cy.get('form').then(form$ => {
      form$.on('submit', e => {
        e.preventDefault()
