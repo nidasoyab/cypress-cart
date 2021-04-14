@@ -41,7 +41,7 @@ Cypress.Commands.add("SignUp", ()=>{
     })
    })
    
-   cy.get('[data-testid=btn-create-account]').click()
+   cy.get('button[data-testid="btn-create-account"]').click()
   })
 
 Cypress.Commands.add(
