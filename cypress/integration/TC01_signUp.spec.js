@@ -52,6 +52,8 @@ describe('signUp', () => {
     cy.get('.style-module--payment-method-form--3finD > [data-testid=opt-form-with-error] > form > :nth-child(9) > .opt-form-cancel-save > :nth-child(2) > [data-testid=btn-change-email]').click()
     cy.wait(5000)
     cy.get('div.row>div>button[type="submit"]').contains('Pay now').click({ force: true })
+    cy.wait(5000)
+    cy.get('section.style-module--column--FYJDe').first().children('p').first().should('contain','Eddy')
     
   })
 })
