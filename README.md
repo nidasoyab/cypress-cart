@@ -4,4 +4,4 @@ Running the tests:
 
 cd cypress-cart
 
-docker run -it -v $PWD:/e2e -w /e2e cypress/included:6.2.1
+docker run -it -v $PWD:/e2e -w /e2e cypress/included:6.2.1 --headless --browser chrome
